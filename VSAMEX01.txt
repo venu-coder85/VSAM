@@ -1,0 +1,14 @@
+//TECN091R JOB NOTIFY=&SYSUID               
+//STEP1 EXEC PGM=IDCAMS                     
+//SYSPRINT DD SYSOUT=*                      
+//SYSIN DD *                                
+  DEFINE CLUSTER             -              
+    (NAME(TECN091.PRODUCT.ESDS) -       
+     RECORDSIZE(80,80)       -              
+     TRACK(5,5)              -              
+     CISZ(4096)              -              
+     VOLUMES(ZAPRD8)         -              
+     NONINDEXED              - 
+     REUSE)
+/*
+ 
