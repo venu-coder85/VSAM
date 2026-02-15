@@ -1,0 +1,13 @@
+//TECN091A  JOB NOTIFY=&SYSUID
+//STEP1 EXEC PGM=IDCAMS
+//SYSPRINT DD SYSOUT=*
+//SYSOUT   DD SYSOUT=*
+//BACKUP   DD DSN=TECN091.PRODUCT.ESDS.BCKUP,DISP=SHR
+//SYSIN    DD *                                        
+     IMPORT                                 -
+     INFILE(BACKUP)                         -
+     OUTDATASET(USER_ID.PRODUCT.ESDS) -
+     INTOEMPTY
+/*
+
+ 
